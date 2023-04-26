@@ -22,7 +22,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', '799360') {
+        docker.withRegistry('https://registry.hub.docker.com', 'pavandockerhub') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
